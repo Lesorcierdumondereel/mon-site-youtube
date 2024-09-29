@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaîne YouTube - Ismaïl Bentahar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .channel-info {
+            max-width: 800px;
+        }
+        .channel-info h1 {
+            margin: 0;
+        }
+        .channel-info p {
+            color: #606060;
+        }
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+            color: #909090;
+        }
+        .subscribe-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            position: relative;
+            transition: 0.3s;
+        }
+        .video-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .video {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .thumbnail {
+            width: 100%;
+            height: 170px;
+            background-color: grey;
+            margin-bottom: 10px;
+        }
+        .video-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Animation du bouton "S'abonner" */
+        .subscribe-btn.moving {
+            position: absolute;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="profile-info">
+            <img class="profile-picture" src="file:///C:/Users/ismab/Downloads/Leonardo_Phoenix_Imagine_une_scne_avec_des_lments_qui_symbolis_1.jpg" alt="Photo de profil Ismaïl Bentahar">
+            <div class="channel-info">
+                <h1>Ismaïl Bentahar</h1>
+                <p>Bienvenue sur ma chaîne, dédiée aux créations musicales sur mesure. Chaque morceau est conçu selon les demandes de mes clients, qui choisissent le thème et le style. Vous trouverez ici une variété de musiques adaptées à différents besoins, allant de compositions apaisantes à des créations plus dynamiques. Une de mes œuvres est dédiée à la Palestine, mais chaque son est unique, basé sur les envies de ceux qui me font confiance.</p>
+                <div class="stats">
+                    <span>@IsmaïlBentahar-music</span>
+                    <span>•</span>
+                    <span>20 abonnés</span>
+                    <span>•</span>
+                    <span>13 vidéos</span>
+                </div>
+            </div>
+        </div>
+        <button id="subscribe-btn" class="subscribe-btn">S'abonner</button>
+    </div>
+
+    <div class="video-list">
+        <div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Sans%20titre%20(5).png" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - La Danse des 10 (Official Audio)</div>
+        </div>
+        <div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Sans%20titre%20(1).png" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - Méfi-Toi (Official Audio)</div>
+        </div>
+        <div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Sans%20titre%20(2)%20(1).png" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - Pourquoi Pas (Official Audio)</div>
+        </div>
+        <div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Sans%20titre%20(8).png" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - Le Fromage qui Pue (Official Audio)</div>
+        </div>
+<div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/2%20(1).jpg" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - Sous l'Orage du Soir (Official Audio)</div>
+        </div>
+<div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/ecbb071_613936758-826120.jpg" alt="Titre de la vidéo">
+            <div class="video-title">Voice of peace - PALESTINE (Clip Official - By Ismaïl BENTAHAR)</div>
+        </div>
+<div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Firefly%2020240828223735.png" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - L'été est terminé (Official Audio)</div>
+        </div>
+<div class="video">
+            <img class="thumbnail" src="file:///C:/Users/ismab/Downloads/Copie%20de%20Copie%20de%20Isma%C3%AFl%20Bentahar%20-%20De%20la%20gloire%20%C3%A0%20l%E2%80%99ombre%20(Official%20Audio%20)%20(1).jpg" alt="Titre de la vidéo">
+            <div class="video-title">Ismaïl Bentahar - Le Marathon des devoirs (Official Audio)</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const subscribeBtn = document.getElementById('subscribe-btn');
+    let moveCount = 0;
+    const maxMoves = 5; // Nombre de fois que le bouton s'échappe avant de revenir
+
+    subscribeBtn.addEventListener('mouseover', () => {
+        if (moveCount < maxMoves) {
+            const randomX = Math.random() * 300 - 150; // Mouvement aléatoire en X
+            const randomY = Math.random() * 300 - 150; // Mouvement aléatoire en Y
+            subscribeBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            moveCount++;
+        } else {
+            subscribeBtn.style.transform = 'translate(0, 0)'; // Le bouton revient à sa position initiale
+            moveCount = 0; // Réinitialise le compteur de mouvements
+        }
+    });
+
+    subscribeBtn.addEventListener('click', () => {
+        window.location.href = "https://www.youtube.com/@Isma%C3%AFlBentahar-music";
+    });
+</script>
+
+</body>
+</html>
+
